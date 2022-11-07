@@ -24,7 +24,7 @@ function FavoritePlateform() {
                 Join over 40,000+ businesses worldwide.
               </div>
               <div className="text-[40px] font-medium">
-                We're Working Best With <br />
+                We are Working Best With <br />
                 Your Favorite Platforms
               </div>
               <div>
