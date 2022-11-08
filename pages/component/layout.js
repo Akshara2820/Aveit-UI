@@ -3,7 +3,7 @@ import React from "react";
 import Header from "./header";
 import QuickAccess from "./quick-access";
 import TicketingSystem from "./ticketing-system";
-import FavoritePlateform from "./allBrands";
+import FavoritePlateform from "./all-brands";
 import OverView from "./overview";
 import Faq from "./faq";
 import Package from "./packages";
