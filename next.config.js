@@ -6,8 +6,10 @@ const nextConfig = {
 
 module.exports = {
   experimental: {
+    externalDir: true,
     fontLoaders: [
       { loader: '@next/font/google', options: { subsets: ['latin'] } },
     ],
   },
+  disableExperimentalFeaturesWarning: true
 }

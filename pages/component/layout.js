@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "./header";
-import QuickAccess from "./quickAccess";
+import QuickAccess from "./quick-access";
 import TicketingSystem from "./ticketing-system";
 import FavoritePlateform from "./allBrands";
 import OverView from "./overview";
