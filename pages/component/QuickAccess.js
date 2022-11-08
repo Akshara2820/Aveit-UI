@@ -33,10 +33,10 @@ function QuickAccess() {
               return (
                 <div className="" key={i.icon}>
                   <div>
-                    <div className="flex justify-center text-[40px] mt-5">
+                    <div className="flex justify-center text-[40px]  mt-5">
                       {i.icon}
                     </div>
-                    <div className=" text-[30px] flex justify-center font-semibold">
+                    <div className=" md:text-[30px] text-[20px] flex justify-center font-semibold">
                       {i.heading}
                     </div>
                     <div> {i.sub} </div>

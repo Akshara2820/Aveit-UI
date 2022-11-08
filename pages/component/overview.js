@@ -13,7 +13,7 @@ function OverView() {
           >
             OVERVIEW
           </div>
-          <div className="flex justify-center text-center text-[40px] font-medium">
+          <div className="heading flex justify-center text-center md:text-[40px] text-[30px] p-4 font-medium">
             Quick Software Overview
           </div>
           <div className="relative z-1 lg:grid grid-cols-2 gap-10 lg:p-10">
@@ -21,7 +21,7 @@ function OverView() {
               <span>01</span>
               <div className="card">
              
-              <div className="text-[40px] font-medium ">App Customiation</div>
+              <div className="md:text-[40px] text-[30px] font-medium heading">App Customiation</div>
               <div className="lg:pr-20">
                 Loram & Loram Technologies logos Leading the digital
                 transformation of railway maintenance With decades of
@@ -42,11 +42,11 @@ function OverView() {
 
 export default OverView;
 const OverView1 = styled.div`
+
   span {
     font-size: 100px;
     font-weight: 900;
     opacity: 0.1;
-    font-family: "Quicksand", sans-serif;
     top: -120px;
   }
   .card1{
@@ -54,7 +54,6 @@ const OverView1 = styled.div`
     @media (max-width:1023px){
     border-radius: 12px 10px 0px 0px;
     }
-
   }
   .card{
     z-index: 10;

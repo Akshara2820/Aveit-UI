@@ -40,21 +40,27 @@ const Items = [
 function Package() {
   return (
     <div>
+    <div className="design relative"> <img src="./images/design-1.png" alt="logo"  /></div>
       <Contanier>
-        <Package1>
-          <div className="text-center font-medium" style={{ color: "#4628ba" }}>
+        <Package1 className="">
+        <div className="mt-[-700px]">
+
+          <div className="heading text-center font-medium" style={{ color: "#4628ba" }}>
             OUR PACKAGES
           </div>
-          <div className="text-center text-[40px] font-medium" >
-            Take a look of our Pricing and <br />
+          <div className="heading text-center md:text-[40px] text-[30px] font-medium" >
+            Take a look of our Pricing and 
             select Your Choice
           </div>
-          <div className="flex flex-wrap justify-center gap-10 mt-10">
+          </div>
+
+
+          <div className="flex flex-wrap justify-center gap-10 mt-10 relative z-1">
             {Items.map((i) => {
               return (
                 <div key={i.plan} className="card border">
                   <div className="text-[20px]">{i.plan}</div>
-                  <div className="text-[35px] font-semibold"> {i.price}</div>
+                  <div className="md:text-[35px] text-[30px] font-semibold"> {i.price}</div>
                   <hr />
                   <div className="mt-5 ">
                     <div className="flex items-center justify-between gap-10 p-2 bg-slate-100">
@@ -83,6 +89,7 @@ function Package() {
 
 export default Package;
 const Package1 = styled.div`
+
   .card {
     background: #ffffff;
     padding: 60px ;

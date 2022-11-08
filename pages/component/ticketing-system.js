@@ -8,8 +8,8 @@ function TicketingSystem() {
       <Contanier>
         <Ticket>
           <div className="ticketingSystem lg:grid grid-cols-2 gap-10">
-            <div className="lg:ml-20">
-              <div className="text-[40px] font-medium">
+            <div className="lg:ml-20 mt-10 sm:text-start text-center">
+              <div className="heading md:text-[40px] text-[30px] font-medium ">
                 Great <br /> ticketing shape system
                 <br /> for your customer.
               </div>
@@ -20,7 +20,7 @@ function TicketingSystem() {
 
               <p className="mt-10">
                 <span className="input-email">
-                  <input type="text"  placeholder="Email*" />
+                  <input type="text" placeholder="Email*" />
                   <button type="submit">Get Started</button>
                 </span>
                 <br />
@@ -30,7 +30,11 @@ function TicketingSystem() {
             </div>
 
             <div className="dashboard-img shadow-lg lg:mt-0 mt-10">
-              <img className=" relative" src="./images/dashboard-2.png" alt="logo---" />
+              <img
+                className=" relative img-dashbord"
+                src="./images/dashboard-2.png"
+                alt="logo---"
+              />
               <img
                 className="person-img lg:block hidden"
                 src="./images/chat-1.png"
@@ -43,23 +47,62 @@ function TicketingSystem() {
       <div>
         <img className="-mt-64" src="./images/background-1.png" alt="loading" />{" "}
       </div>
-     
     </div>
   );
 }
 
 export default TicketingSystem;
 const Ticket = styled.div`
-  padding-top: 80px;
   padding-bottom: 120px;
+  padding-top: 20px;
+  
   .input-email {
     position: relative;
   }
+  .heading{
+    animation: fadeIn 0.5s ease-in both;
+  @keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+  }
+
+  .img-dashbord{
+    animation: fadeIn 1s ease-in both;
+    @keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 3;
+		transform: translate3d(0, 0, 0);
+	}
+}
+  }
+ 
   .person-img {
     position: absolute;
     right: 20%;
     bottom: 80px;
     height: 52%;
+    animation: fadeIn 2s ease-in both;
+  @keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 3;
+		transform: translate3d(0, 0, 0);
+	}
+}
   }
   input {
     min-height: 70px;

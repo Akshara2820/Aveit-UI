@@ -15,16 +15,16 @@ const Items = [
 
 function FavoritePlateform() {
   return (
-    <div>
+    <div className="">
       <Contanier>
         <Plateform>
-          <div className="md:grid grid-cols-2  ">
+          <div className="md:grid grid-cols-2">
             <div className="text-center">
               <div className="text-[20px]">
                 Join over 40,000+ businesses worldwide.
               </div>
-              <div className="text-[40px] font-medium">
-                We are Working Best With <br />
+              <div className=" heading md:text-[40px] text-[30px] font-medium ">
+                We are Working Best With 
                 Your Favorite Platforms
               </div>
               <div>
@@ -33,17 +33,23 @@ function FavoritePlateform() {
                 </button>
               </div>
             </div>
-            <div className="flex flex-wrap justify-center">
+          <div className="retative z-1">
+            <div className="glob "> <img src="./images/globe.webp" alt="logo"/> </div>
+            <div className="flex flex-wrap justify-center  ">
+          
               {Items.map((i) => {
+                
                 return (
-                  <div key={i.icon} className=" ">
+                  <div key={i.icon} className="">
+                  
                     <div className="brands ">
-                      <div className='icon' > {i.icon} </div>
+                      <div className='icon' style={{color: `${i.color}`}}> {i.icon} </div>
                     </div>
                   </div>
                 );
               })}
             </div>
+          </div>
           </div>
         </Plateform>
       </Contanier>
@@ -53,8 +59,48 @@ function FavoritePlateform() {
 
 export default FavoritePlateform;
 const Plateform = styled.div`
-  padding-top: 100px;
 
+  padding:100px;
+  @media(max-width:1050px){
+padding: 60px;
+}
+@media(max-width:500px){
+padding: 20px;
+}
+
+.heading{
+  font-weight: 600;
+}
+
+  .glob{
+    position: absolute;
+    height: auto;
+    width: 500px;
+    z-index: -1;
+   
+    margin-top: -80px;
+    @media (max-width:900px) {
+      width: 350px;
+      margin-top: 1.5rem;
+    }
+    @media (max-width:500px) {
+      width: 300px;
+      margin-top: 3rem;
+    }
+  }
+
+
+  .glob{
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+    animation: rotation 15s infinite linear;
+  }
   button {
     background: #4628ba;
     padding: 15px 20px;

@@ -9,10 +9,10 @@ function Review() {
     <div>
       <Contanier>
         <Review1>
-          <div className=" font-medium" style={{ color: "#4628ba" }}>
+          <div className="heading font-medium" style={{ color: "#4628ba" }}>
             REVIEW
           </div>
-          <div className=" text-[40px] font-medium">
+          <div className="heading md:text-[40px] text-[30px] font-medium">
             10,000+ Happy Customers
           </div>
           <div className=" font-medium mt-6">(Product Design)</div>
@@ -56,6 +56,7 @@ function Review() {
               src="./images/profile-1.jpg"
               alt="lodnbsd"
             />
+            
             <div className="text-[24px]" style={{ color: "#0e2258" }} >Jonath Dark</div>
             <div className="opacity-75">Customer Support</div>
           </div>

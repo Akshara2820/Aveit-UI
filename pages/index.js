@@ -11,21 +11,12 @@ import OverView from "./component/overview";
 import Faq from "./component/faq";
 import Package from "./component/packages";
 import Review from "./component/review";
+import News from "./component/news";
+import Footer from "./component/footer";
+import Layout from "./component/layout";
 
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <TicketingSystem/>
-      <QuickAccess/>
-      <FavoritePlateform/>
-      <OverView/>
-      <Faq/>
-      <Package/>
-      <Review/>
-      
-     
-    </>
-  );
+  return <Layout/>
+
 }
