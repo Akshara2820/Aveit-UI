@@ -4,12 +4,16 @@ const nextConfig = {
   swcMinify: true,
 }
 
-module.exports = {
-  experimental: {
-    externalDir: true,
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } },
-    ],
-  },
-  disableExperimentalFeaturesWarning: true
-}
+
+
+
+// module.exports = {
+//   experimental: {
+//     externalDir: true,
+//     forceSwcTransforms: true,
+//     fontLoaders: [
+//       { loader: '@next/font/google', options: { subsets: ['latin'] } },
+//     ],
+//   },
+//   disableExperimentalFeaturesWarning: true
+// }
