@@ -121,7 +121,7 @@ const Header1 = styled.div`
   .header__area.sticky {
     position: fixed;
     background: #fff;
-    z-index: 1;
+    z-index: 2;
     animation: fadeInDown 0.3s ease-in-out 0s 1 normal none running;
     box-shadow: 0 8px 50px 0 rgb(8 0 42 / 5%);
    
