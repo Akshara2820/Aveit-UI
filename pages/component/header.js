@@ -90,8 +90,6 @@ function Header() {
               </div>
             ))}
           </div>
-         
-          
         </div>
       </Contanier>
     </div>
@@ -105,6 +103,7 @@ export const Contanier = styled.div`
   padding: 20px;
   margin: auto;
   left: 0;
+  font-family: 'Quicksand', sans-serif;
 
   .image-logo {
     width: 150px;

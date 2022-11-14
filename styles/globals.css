@@ -6,7 +6,8 @@
 
 body{
   background-color: white;
-  font-family: var(--Quicksand-font);
+  /* font-family: var(--Quicksand-font); */
+ 
   color: #0e2258;
   left: 0;
 
