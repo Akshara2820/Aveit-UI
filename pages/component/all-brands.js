@@ -34,7 +34,7 @@ function FavoritePlateform() {
               </div>
             </div>
           <div className="retative z-1">
-            <div className="glob "> <img src="./images/globe.webp" alt="logo"/> </div>
+            <div className="glob sm:block hidden "> <img src="./images/globe.webp" alt="logo"/> </div>
             <div className="flex flex-wrap justify-center  ">
           
               {Items.map((i) => {
