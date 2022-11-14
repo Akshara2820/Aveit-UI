@@ -16,6 +16,9 @@ function Layout() {
 
   return (
     <div className=''>
+  
+
+   
       <Header />
       <TicketingSystem />
       <QuickAccess />
@@ -26,8 +29,10 @@ function Layout() {
       <Review />
       <News />
       <Footer />
+     
     </div>
   );
 }
 
 export default Layout;
+
