@@ -6,14 +6,12 @@ const ubuntu = Quicksand({
   variable: '--Quicksand-font'
 })
 
-function MyApp({ Component, pageProps }) {
-
-  return (
+function MyApp({ Component, pageProps }){
+  return(
     <main className={ubuntu.className}>
     <Component {...pageProps} />
     </main>
   )
 }
-
 export default MyApp
 
