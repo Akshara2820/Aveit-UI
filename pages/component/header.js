@@ -104,7 +104,7 @@ export const Contanier = styled.div`
   margin: auto;
   left: 0;
   font-family: 'Quicksand', sans-serif;
-
+  
   .image-logo {
     width: 150px;
   }

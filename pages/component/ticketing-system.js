@@ -9,11 +9,11 @@ function TicketingSystem() {
         <Ticket>
           <div className="ticketingSystem lg:grid grid-cols-2 gap-10">
             <div className="lg:ml-20 mt-10 sm:text-start text-center">
-              <div className="heading md:text-[40px] text-[30px] font-medium ">
+              <div className="heading md:text-[40px] text-[30px] font-bold ">
                 Great <br /> ticketing shape system
                 <br /> for your customer.
               </div>
-              <div className="pt-6">
+              <div className="pt-6 subHeading">
                 Belonging in september no am immediate newspaper. september she{" "}
                 <br /> conveying did eat may extensive.
               </div>
@@ -55,54 +55,70 @@ export default TicketingSystem;
 const Ticket = styled.div`
   padding-bottom: 120px;
   padding-top: 20px;
-  
+
   .input-email {
     position: relative;
   }
-  .heading{
-    animation: fadeIn 0.5s ease-in both;
-  @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -20%, 0);
-	}
-	to {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
-}
+
+  .heading {
+    animation: fadeInDown 500ms ease-in both;
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translate3d(0, -20%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
 
-  .img-dashbord{
+  .subHeading {
+    animation: fadeInUp 500ms;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0 , 20% , 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+  }
+
+  .img-dashbord {
     animation: fadeIn 1s ease-in both;
     @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -20%, 0);
-	}
-	to {
-		opacity: 3;
-		transform: translate3d(0, 0, 0);
-	}
-}
+      from {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+      }
+      to {
+        opacity: 3;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
- 
+
   .person-img {
     position: absolute;
     right: 20%;
-    bottom: 80px;
+    bottom: -50px;
     height: 52%;
-    animation: fadeIn 2s ease-in both;
-  @keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translate3d(0, -20%, 0);
-	}
-	to {
-		opacity: 3;
-		transform: translate3d(0, 0, 0);
-	}
-}
+    animation: fadeInUp 2s;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0 , 20% , 0);
+      }
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
   input {
     min-height: 70px;
