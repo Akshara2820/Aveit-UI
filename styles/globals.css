@@ -7,7 +7,7 @@
 body{
   background-color: white;
   /* font-family: var(--Quicksand-font); */
- 
+ overflow: hidden;
   color: #0e2258;
   left: 0;
 
