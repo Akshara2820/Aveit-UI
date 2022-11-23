@@ -28,7 +28,7 @@ function Faq() {
             {Items.map((i) =>{
                 return(
                     <div key={i.heading}>
-                    <div className="flex items-center justify-between inputs" data-aos="fade-left">
+                    <div className="flex items-center justify-between inputs" data-aos="zoom-in">
                     <div className=""> {i.heading}</div>
                     <div> {i.icon} </div>
                     </div>
