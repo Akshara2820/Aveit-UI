@@ -24,7 +24,7 @@ function OverView() {
             Quick Software Overview
           </div>
           <div className="relative z-1 lg:grid grid-cols-2 gap-10 lg:p-10">
-            <div className="card1 md:px-14" data-aos="fade-right" style={{ background: "#0e2258", color: "white" }}>
+            <div className="card1 md:px-14" data-aos="zoom-in" style={{ background: "#0e2258", color: "white" }}>
               <span>01</span>
               <div className="card">
              
@@ -39,7 +39,7 @@ function OverView() {
               </div>
             </div>
 
-            <div className="lg:-ml-24 lg:mt-4 rounded-lg" data-aos="fade-left"> <img className="shadow-lg" src="./images/dashboard-2.png" alt="loading"/> </div>
+            <div className="lg:-ml-24 lg:mt-4 rounded-lg" data-aos="zoom-in"> <img className="shadow-lg" src="./images/dashboard-2.png" alt="loading"/> </div>
           </div>
         </OverView1>
       </Contanier>
