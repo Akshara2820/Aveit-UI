@@ -48,7 +48,7 @@ function FavoritePlateform() {
                 return (
                   <div key={i.icon} className="">
                   
-                    <div className="brands " data-aos="fade-left">
+                    <div className="brands " data-aos="zoom-in">
                       <div className='icon' style={{color: `${i.color}`}}> {i.icon} </div>
                     </div>
                   </div>
