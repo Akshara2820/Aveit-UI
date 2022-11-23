@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Contanier } from "./header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Items = [
   {
     image: "./images/card1.jpg",
@@ -30,23 +32,28 @@ const Items = [
 ];
 
 function News() {
+  useEffect (() =>{
+    AOS.init({
+      duration: 1500,
+    })
+  },[])
   return (
     <div className="mt-10 p-10" style={{ background: "#d9eefa" }}>
       <Contanier>
         <News1>
           <div className="">
-          <div className="heading font-medium" style={{ color: "#4628ba" }}>
+          <div className="heading font-medium" style={{ color: "#4628ba" }} data-aos="fade-down">
            LATEST NEWS
           </div>
-          <div className="heading md:text-[40px] text-[30px] font-medium text-center">
+          <div className="heading md:text-[40px] text-[30px] font-medium text-center" data-aos="fade-down">
           Most Popular Breaking News & <br/> Top Stories
           </div>
           </div>
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2  gap-10 card2 mt-14">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2  gap-10 card2 mt-14" >
             {Items.map((i) => {
               return (
                 <div key={i.date}>
-                  <div className="rounded md:mt-0 mt-5 shadow-xl">
+                  <div className="rounded md:mt-0 mt-5 shadow-xl" data-aos="flip-left">
                     <div className="overflow-hidden relative card">
                       <img
                         className="img grow object-cover -z-10"

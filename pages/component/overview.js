@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Contanier } from "./header";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function OverView() {
+  useEffect (() =>{
+    AOS.init({
+      duration: 1200,
+    })
+  },[])
   return (
     <div className="mt-10" style={{ background: "#d9eefa" }}>
       <Contanier>
@@ -10,14 +16,15 @@ function OverView() {
           <div
             className="flex justify-center  font-semibold"
             style={{ color: "#4628ba" }}
+            data-aos="fade-down"
           >
             OVERVIEW
           </div>
-          <div className="heading flex justify-center text-center md:text-[40px] text-[30px] p-4 font-medium">
+          <div className="heading flex justify-center text-center md:text-[40px] text-[30px] p-4 font-medium" data-aos="fade-down">
             Quick Software Overview
           </div>
           <div className="relative z-1 lg:grid grid-cols-2 gap-10 lg:p-10">
-            <div className="card1 md:px-14" style={{ background: "#0e2258", color: "white" }}>
+            <div className="card1 md:px-14" data-aos="fade-right" style={{ background: "#0e2258", color: "white" }}>
               <span>01</span>
               <div className="card">
              
@@ -32,7 +39,7 @@ function OverView() {
               </div>
             </div>
 
-            <div className="lg:-ml-24 lg:mt-4 rounded-lg"> <img className="shadow-lg" src="./images/dashboard-2.png" alt="loading"/> </div>
+            <div className="lg:-ml-24 lg:mt-4 rounded-lg" data-aos="fade-left"> <img className="shadow-lg" src="./images/dashboard-2.png" alt="loading"/> </div>
           </div>
         </OverView1>
       </Contanier>

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Contanier } from "./header";
 import styled from "styled-components";
 import { FaAngular, FaBlackberry, FaAmazonPay , FaCodepen, FaDigitalOcean,FaReddit,FaDropbox} from "react-icons/fa";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Items = [
   { icon: <FaAngular />, color: '#dd1b16' },
   { icon: <FaBlackberry /> , color: '#4D0026'},
@@ -14,12 +15,17 @@ const Items = [
 ];
 
 function FavoritePlateform() {
+  useEffect (() =>{
+    AOS.init({
+      duration: 1200,
+    })
+  },[])
   return (
     <div className="">
       <Contanier>
         <Plateform>
           <div className="md:grid grid-cols-2">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-right">
               <div className="text-[20px]">
                 Join over 40,000+ businesses worldwide.
               </div>
@@ -42,7 +48,7 @@ function FavoritePlateform() {
                 return (
                   <div key={i.icon} className="">
                   
-                    <div className="brands ">
+                    <div className="brands " data-aos="fade-left">
                       <div className='icon' style={{color: `${i.color}`}}> {i.icon} </div>
                     </div>
                   </div>

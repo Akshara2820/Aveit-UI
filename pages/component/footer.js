@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Contanier } from "./header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,21 +12,26 @@ import {
 } from "react-icons/fa";
 
 function Footer() {
+  useEffect (() =>{
+    AOS.init({
+      duration: 1500,
+    })
+  },[])
   return (
     <div className="footer ">
       <Contanier>
         <Footer1>
           <div className="flex flex-wrap justify-between gap-10 p-10 mt-14">
             <div>
-              <div className="heading text-[24px] font-medium m-auto ">About Aveit</div>
-              <div className="mt-4" style={{ color: "#cccccc" }}>
+              <div className="heading text-[24px] font-medium m-auto "  data-aos="fade-right">About Aveit</div>
+              <div className="mt-4" style={{ color: "#cccccc" }}  data-aos="fade-down">
                 Required honoured trifling eat pleasure man relation. Assurance
                 <br /> yet bed was improving furniture man. Distrusts delighted
                 Excuse
                 <br /> few the remain highly feebly add people manner say. It
                 high at <br /> my mind by roof.
               </div>
-              <div className="flex gap-10 mt-4">
+              <div className="flex gap-10 mt-4" data-aos="zoom-out">
                 <FaFacebookF />
                 <FaTwitter />
                 <FaLinkedinIn />
@@ -33,34 +40,34 @@ function Footer() {
             </div>
 
             <div>
-              <div className="heading text-[24px] font-medium ">Service</div>
+              <div className="heading text-[24px] font-medium "  data-aos="fade-right">Service</div>
               <ul className="mt-4" style={{ color: "#cccccc" }}>
-                <li className="mt-4">SEO Marketing</li>
-                <li className="mt-4">Pay Per Click</li>
-                <li className="mt-4">SEO Services</li>
-                <li className="mt-4">Social Media</li>
-                <li className="mt-4">SEO Audit</li>
+                <li className="mt-4" data-aos="fade-down">SEO Marketing</li>
+                <li className="mt-4" data-aos="fade-up">Pay Per Click</li>
+                <li className="mt-4" data-aos="fade-down">SEO Services</li>
+                <li className="mt-4" data-aos="fade-up">Social Media</li>
+                <li className="mt-4" data-aos="fade-down">SEO Audit</li>
               </ul>
             </div>
             <div>
-              <div className="heading text-[24px] font-medium"> Company</div>
+              <div className="heading text-[24px] font-medium"  data-aos="fade-right"> Company</div>
               <ul className="mt-4" style={{ color: "#cccccc" }}>
-                <li className="mt-4">About Us</li>
-                <li className="mt-4">Contact Us</li>
-                <li className="mt-4">Career</li>
-                <li className="mt-4">Terms</li>
-                <li className="mt-4">Team Members</li>
+                <li className="mt-4" data-aos="fade-down">About Us</li>
+                <li className="mt-4" data-aos="fade-up">Contact Us</li>
+                <li className="mt-4" data-aos="fade-down">Career</li>
+                <li className="mt-4" data-aos="fade-up">Terms</li>
+                <li className="mt-4" data-aos="fade-down">Team Members</li>
               </ul>
             </div>
             <div>
-              <div className="heading text-[24px] font-medium"> Contact Us</div>
+              <div className="heading text-[24px] font-medium"  data-aos="fade-right"> Contact Us</div>
               <ul className="mt-4" style={{ color: "#cccccc" }}>
-                <liv className="mt-4 text-white font-semibold">ADDRESS</liv>
-                <li className="mt-4">California, TX 70240</li>
-                <li className="mt-4 text-white font-semibold">EMAIL</li>
-                <li className="mt-4">akshara@gmail.com</li>
-                <li className="mt-4 text-white font-semibold">CONTACT</li>
-                <li className="mt-4">+91 9696530098</li>
+                <liv className="mt-4 text-white font-semibold" data-aos="fade-down">ADDRESS</liv>
+                <li className="mt-4"data-aos="fade-up" >California, TX 70240</li>
+                <li className="mt-4 text-white font-semibold" data-aos="fade-down">EMAIL</li>
+                <li className="mt-4" data-aos="fade-up">akshara@gmail.com</li>
+                <li className="mt-4 text-white font-semibold" data-aos="fade-down">CONTACT</li>
+                <li className="mt-4" data-aos="fade-up">+91 9696530098</li>
               </ul>
             </div>
           </div>

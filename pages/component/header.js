@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineCloseCircle, AiOutlineMenu } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 function Header() {
   const [isMenu, setIsMenu] = useState(false);
@@ -21,6 +22,20 @@ function Header() {
       title: "Contact",
     },
   ];
+  const draw = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: (i) => {
+      const delay = 1 + i * 0.5;
+      return {
+        pathLength: 1,
+        opacity: 1,
+        transition: {
+          pathLength: { delay, type: "spring", duration: 1.5, bounce: 0 },
+          opacity: { delay, duration: 0.01 },
+        },
+      };
+    },
+  };
 
   return (
     <div>
@@ -74,11 +89,16 @@ function Header() {
         <div className={`${isMenu ? "menu-view" : "view_menu"} menu-bar bar`}>
           <div className="flex justify-between p-5">
             <div>
-              <img className="w-[150px]" src="./images/logo-blue.png" alt="loading..." />
+              <img
+                className="w-[150px]"
+                src="./images/logo-blue.png"
+                alt="loading..."
+              />
             </div>
 
             <div onClick={() => setIsMenu(false)}>
               <AiOutlineCloseCircle className="text-[40px] text-black -mt-1" />
+              
             </div>
           </div>
           <div className="bar-menu">
@@ -103,8 +123,8 @@ export const Contanier = styled.div`
   padding: 20px;
   margin: auto;
   left: 0;
-  font-family: 'Quicksand', sans-serif;
-  
+  font-family: "Quicksand", sans-serif;
+
   .image-logo {
     width: 150px;
   }
@@ -124,7 +144,6 @@ const Header1 = styled.div`
     z-index: 2;
     animation: fadeInDown 0.3s ease-in-out 0s 1 normal none running;
     box-shadow: 0 8px 50px 0 rgb(8 0 42 / 5%);
-   
   }
   .header__transparent {
     position: absolute;

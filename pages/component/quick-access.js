@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Contanier } from "./header";
 import { FaFingerprint } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { SlLayers } from "react-icons/sl";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Items = [
   {
@@ -23,7 +25,13 @@ const Items = [
   },
 ];
 
+
 function QuickAccess() {
+  useEffect (() =>{
+    AOS.init({
+      duration: 1200,
+    })
+  },[])
   return (
     <div className="py-20" style={{ background: "#4628ba", color: "white" }}>
       <Contanier>
@@ -32,7 +40,7 @@ function QuickAccess() {
             {Items.map((i) => {
               return (
                 <div className="" key={i.icon}>
-                  <div>
+                  <div data-aos="zoom-in">
                     <div className="flex justify-center text-[40px]  mt-5">
                       {i.icon}
                     </div>
